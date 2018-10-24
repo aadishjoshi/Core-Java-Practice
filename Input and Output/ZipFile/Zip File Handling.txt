@@ -1,0 +1,17 @@
+/**************************************************************************************************
+* Notes written by Aadish Joshi. 
+* ZipFile write/ read data 
+* Extends CloseableFrame
+**************************************************************************************************/
+import java.util.zip;
+
+Java 1.1 handles both GZIP and ZIP format.
+
+Each zip file has a header consisting of name of the file and type of compression method that is 
+used
+
+ZipEntry that describes the entry of the zip.
+zipInputStream.getNextEntry() gets the next entry.
+closeEntry closes the entry.
+
+ZipOutputStream to write data into zip.
