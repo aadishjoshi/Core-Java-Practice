@@ -1,0 +1,27 @@
+/**************************************************************************************************
+* Notes written by Aadish Joshi. 
+* Streams to write/ read data 
+* Throws IOException
+**************************************************************************************************/
+To read and write data in file we use stream.
+
+Reading sequence of bytes :- Input stream / java.io.InputStream.
+Writing a sequence of bytes :- Output stream / java.io.OutputStream.
+
+'Available' method lets us check the number of bytes that are currently available for reading.
+int bytesAvailable = System.in.available();
+
+We need to close the stream as stream uses OS resources that are limited in supply.
+
+InputStream and Output stream read the files are arrays of bytes, but cannot read it as a datatype
+such as string, int etc. For that we use DataInputStream and DataOutputStream which work well with
+basic java datatypes.
+
+FileInputStream f = new FileInputStream("something.txt");
+DataInputStream d = new DataInputStream (f);
+double s = d.readDouble();
+
+RandomAccessFile lets you read/write data anywhere in the file. 
+RandomAccessFile f = new RandomAccessFile("something.txt", "r"); //r for read, rw for write.
+it has file pointer which will point at the position of the next record to be inserted.
+
