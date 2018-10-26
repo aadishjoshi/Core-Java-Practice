@@ -1,0 +1,26 @@
+/************************************************************************************************************************
+* Object Streams / implements serializable
+* Written by - Aadish Joshi
+*************************************************************************************************************************/
+
+To write/read a file input consisting of various data types.
+1)Read object type 
+2)Create a blank object of that type
+3)Fill it with the data that we stored the file.
+
+ObjectOutputStream(new FileOutputStream("filename.datatype"));
+ObjectInputStream(new FileInputStream("filename.datatype"));
+
+
+e.g.
+
+class Employee implements serializable{
+	//class constructor
+}
+
+class Company{
+	psvm(String args){
+		Employee harry = new Employee("Harry", 35000, new Day(1989,10,1));
+		out.writeObject(harry);
+	}
+}
